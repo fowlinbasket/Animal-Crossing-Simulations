@@ -350,10 +350,10 @@ class SmallSpike(TurnipPattern):
 
 if __name__ == '__main__':
     ps = PathSelector()
-    num_weeks = 10_000
+    num_weeks = 1_000_000
     for week in range(num_weeks):
         print(f"\rRunning Week {week + 1:,}/{num_weeks:,}", end="")
         ps.next()
     print()
-    ps.plot_paths()
-    ps.plot_average()
+    #ps.plot_paths()
+    ps.plot_average(save_fig=True)
