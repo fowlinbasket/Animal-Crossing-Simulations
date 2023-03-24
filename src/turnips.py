@@ -81,6 +81,7 @@ class PathSelector:
         return avg
 
     def plot_paths(self, save_fig = False):
+        plt.clf()
         for path in self.__paths:
             plt.plot(path)
         plt.ylabel("Price (Bells)")
@@ -97,6 +98,7 @@ class PathSelector:
             plt.show()
 
     def plot_average(self, save_fig = False):
+        plt.clf()
         plt.plot(self.getAverageResults())
         plt.ylabel("Price (Bells)")
         plt.xticks([n * 2 for n in range(7)], DAYS)
@@ -131,9 +133,9 @@ class TurnipPattern:
         return "\n".join(result)
     
     def plot(self, save_fig = False):
+        plt.clf()
         plt.plot(self.prices)
-        plt.xlabel("Day")
-        plt.ylabel("Price")
+        plt.ylabel("Price (Bells)")
         plt.xticks([n * 2 for n in range(7)], DAYS)
         plt.title(f"Turnip Price Path for {self.getName()}")
         if save_fig:
@@ -207,7 +209,7 @@ class UpDownUpDown(TurnipPattern):
 
 class BigSpike(TurnipPattern):
     def getName(self):
-        return "Big Spike"
+        return "Big-Spike"
     
     def runPattern(self, debug=False):
         duration_a = random.randint(1, 7) # 0.5-3.5 days
@@ -280,7 +282,7 @@ class Decreasing(TurnipPattern):
 
 class SmallSpike(TurnipPattern):
     def getName(self):
-        return "Small Spike"
+        return "Small-Spike"
 
     def runPattern(self, debug=False):
         duration_a = random.randint(0, 7) # 0-3.5 days
