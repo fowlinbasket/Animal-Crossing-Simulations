@@ -10,7 +10,7 @@ However, there isn't nearly as much uncertainty as one might think. GitHub user 
 The patterns go as follows:
 
 __Up-Down-Up-Down - 5 Phases:__
-[](../output/Up-Down-Up-Down.png)
+![](../output/Up-Down-Up-Down.png)
 
 | __Phase__ | __Length__ | __Description__ |
 |-----------|------------|-----------------|
@@ -21,7 +21,7 @@ __Up-Down-Up-Down - 5 Phases:__
 | E | (7 - A - C) Steps | 90-140% of base price |
 
 __Big Spike - 5 Phases:__
-[](../output/Big-Spike.png)
+![](../output/Big-Spike.png)
 
 | __Phase__ | __Length__ | __Description__ |
 |-----------|------------|-----------------|
@@ -32,14 +32,14 @@ __Big Spike - 5 Phases:__
 | E | (7 - A) Steps | 40-90% of base price |
 
 __Decreasing - 1 Phase:__
-[](../output/Decreasing.png)
+![](../output/Decreasing.png)
 
 | __Phase__ | __Length__ | __Description__ |
 |-----------|------------|-----------------|
 | A | 12 Steps | Start at 85-90% of base price, then decreasing by 3-5% of base price |
 
 __Small Spike - 6 Phases:__
-[](../output/Small-Spike.png)
+![](../output/Small-Spike.png)
 
 | __Phase__ | __Length__ | __Description__ |
 |-----------|------------|-----------------|
@@ -52,7 +52,10 @@ __Small Spike - 6 Phases:__
 
 ## Decision Tree
 The turnip price patterns are selected by a simple decision tree, where the odds of a pattern being selected is dependent on what the previous pattern was. [Michael Goldstein](https://mgold.io/2020/05/20/forecasting-turnip-prices.html#fnref:1) provided the following flowchart on his blog page:
-[](../output/pattern_flow.png)
+![](../output/pattern_flow.png)
+
+## Optimal Stopping
+An interesting thing to note is how this knowledge affects where we might stop and sell our turnips every week. Running simulations on the decision tree every week for 
 
 ## Conclusion and Application
 By simply knowing what last week's pattern was, we know the probabilities of each pattern occuring this week. A player can use these probabilities as they use Bayesian inference over the first few time steps of a week to determine what pattern they're on, and then sell quickly if it's a decreasing pattern or recognize when to sell if it's going to be a big spike. 
