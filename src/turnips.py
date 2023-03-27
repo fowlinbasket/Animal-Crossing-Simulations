@@ -6,7 +6,6 @@ which can be found in https://gist.github.com/Treeki/85be14d297c80c8b3c0a7637574
 import random
 import matplotlib.pyplot as plt
 import os
-import numpy as np
 
 DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 TIMES = ["AM", "PM"]
