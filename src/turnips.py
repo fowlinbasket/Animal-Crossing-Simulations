@@ -150,7 +150,7 @@ class TurnipPattern:
     
 class UpDownUpDown(TurnipPattern):
     def getName(self):
-        return "Up-Down-Up-Down"
+        return "up-down-up-down"
     
     def runPattern(self, debug = False):
         duration_a = random.randint(0, 6) # 0-3 days
@@ -209,7 +209,7 @@ class UpDownUpDown(TurnipPattern):
 
 class BigSpike(TurnipPattern):
     def getName(self):
-        return "Big-Spike"
+        return "big-spike"
     
     def runPattern(self, debug=False):
         duration_a = random.randint(1, 7) # 0.5-3.5 days
@@ -267,7 +267,7 @@ class BigSpike(TurnipPattern):
 
 class Decreasing(TurnipPattern):
     def getName(self):
-        return "Decreasing"
+        return "decreasing"
     
     def runPattern(self, debug=False):
         duration_a = 12 # 6 days
@@ -282,7 +282,7 @@ class Decreasing(TurnipPattern):
 
 class SmallSpike(TurnipPattern):
     def getName(self):
-        return "Small-Spike"
+        return "small-Spike"
 
     def runPattern(self, debug=False):
         duration_a = random.randint(0, 7) # 0-3.5 days
