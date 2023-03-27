@@ -282,7 +282,7 @@ class Decreasing(TurnipPattern):
 
 class SmallSpike(TurnipPattern):
     def getName(self):
-        return "small-Spike"
+        return "small-spike"
 
     def runPattern(self, debug=False):
         duration_a = random.randint(0, 7) # 0-3.5 days
@@ -352,10 +352,10 @@ class SmallSpike(TurnipPattern):
 
 if __name__ == '__main__':
     ps = PathSelector()
-    num_weeks = 1_000_000
+    num_weeks = 100_000
     for week in range(num_weeks):
         print(f"\rRunning Week {week + 1:,}/{num_weeks:,}", end="")
         ps.next()
     print()
     #ps.plot_paths()
-    ps.plot_average(save_fig=True)
+    ps.plot_average()
