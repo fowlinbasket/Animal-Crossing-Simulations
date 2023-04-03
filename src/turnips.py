@@ -1,8 +1,3 @@
-'''
-The code in this file uses many ideas from GitHub user Treeki's work, 
-which can be found in https://gist.github.com/Treeki/85be14d297c80c8b3c0a76375743325b.
-'''
-
 import random
 import matplotlib.pyplot as plt
 import os
