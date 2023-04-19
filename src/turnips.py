@@ -124,6 +124,7 @@ class TurnipPattern:
         result.append(f"Base Price: {self.base_price}")
         for i in range(2, len(self.prices)):
             result.append(f"{DAYS[i // 2]} {TIMES[i % 2]}: {self.prices[i]}")
+        result.append(f"Pattern was {self.getName()}")
         return "\n".join(result)
     
     def plot(self, save_fig = False):
@@ -345,11 +346,12 @@ class SmallSpike(TurnipPattern):
         
 
 if __name__ == '__main__':
-    ps = PathSelector()
-    num_weeks = 100_000
-    for week in range(num_weeks):
-        print(f"\rRunning Week {week + 1:,}/{num_weeks:,}", end="")
-        ps.next()
-    print()
-    #ps.plot_paths()
-    ps.plot_average()
+    ps = PathSelector(SmallSpike())
+    current_path = ps.next()
+    print(current_path)
+    # num_weeks = 100_000
+    # for week in range(num_weeks):
+    #     print(f"\rRunning Week {week + 1:,}/{num_weeks:,}", end="")
+    #     ps.next()
+    # print()
+    # ps.plot_average()
