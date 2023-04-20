@@ -5,11 +5,11 @@ import os
 DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 TIMES = ["AM", "PM"]
 
-class PathSelector:
+class PatternSelector:
     def __init__(self, prev = None):
         self.__paths = []
-        self.current_path = prev
         self.__prev = prev
+        self.current_path = prev
 
     def prev(self):
         return self.__prev
@@ -346,7 +346,7 @@ class SmallSpike(TurnipPattern):
         
 
 if __name__ == '__main__':
-    ps = PathSelector(SmallSpike())
+    ps = PatternSelector(SmallSpike())
     current_path = ps.next()
     print(current_path)
     # num_weeks = 100_000
