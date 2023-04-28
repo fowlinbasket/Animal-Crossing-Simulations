@@ -343,15 +343,30 @@ class SmallSpike(TurnipPattern):
         if debug:
             print(f"phase start = {phase_start} (should be 14)")
             print(self)
+
+def plot_list(lst, title, save_fig=False):
+    plt.clf()
+    plt.plot(lst)
+    plt.ylabel("Price (Bells)")
+    plt.xticks([n * 2 for n in range(7)], DAYS)
+    plt.title(title)
+    if save_fig:
+        fileName = f"{title.replace(' ', '')}.png"
+        output_dir = os.path.join(os.getcwd(), "output")
+        if not os.path.exists(output_dir): os.mkdir(output_dir)
+        path = os.path.join(output_dir, fileName)
+        plt.savefig(path, bbox_inches="tight")
+        print(f"Plot saved to {path}")
+    else:
+        plt.show()
         
 
 if __name__ == '__main__':
-    ps = PatternSelector(SmallSpike())
-    current_path = ps.next()
-    print(current_path)
+    # ps = PatternSelector(SmallSpike())
     # num_weeks = 100_000
     # for week in range(num_weeks):
     #     print(f"\rRunning Week {week + 1:,}/{num_weeks:,}", end="")
     #     ps.next()
     # print()
     # ps.plot_average()
+    pass
