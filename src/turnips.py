@@ -362,11 +362,10 @@ def plot_list(lst, title, save_fig=False):
         
 
 if __name__ == '__main__':
-    # ps = PatternSelector(SmallSpike())
-    # num_weeks = 100_000
-    # for week in range(num_weeks):
-    #     print(f"\rRunning Week {week + 1:,}/{num_weeks:,}", end="")
-    #     ps.next()
-    # print()
-    # ps.plot_average()
-    pass
+    ps = PatternSelector(SmallSpike())
+    num_weeks = 100_000
+    for week in range(num_weeks):
+        print(f"\rRunning Week {week + 1:,}/{num_weeks:,}", end="")
+        ps.next()
+    print()
+    ps.plot_average()

@@ -95,17 +95,8 @@ def presentation_example():
         
 
 if __name__ == '__main__':
-    # correct = test_predictions(num_tests=1_000_000, track_prev=True)
-    # print(f"Correct {correct * 100:.2f}% of the time")
-    # prices_march12 = [103, 103, 89, 85, 81, 77, 73, 69, 65, 61, 56, 53, 48, 44]
-    # prices_march19 = [91, 91, 37, 33]
-    # prev = Decreasing()
-    # probs = get_probabilities(prev)
-    # # probs = predict(probs, prices_march19[2:], 91)
-    # for name, prob in probs.items():
-    #     print(f"{name}: {prob}")
-    # plot_list(prices_march12, "Week of March 12", True)
-    presentation_example()
+    correct = test_predictions(num_tests=1_000_000, track_prev=True)
+    print(f"Correct {correct * 100:.2f}% of the time")
 
 
     
